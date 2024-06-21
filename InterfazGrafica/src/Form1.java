@@ -1,13 +1,36 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Form1 extends JFrame {
 
-    private JPanel panel1;
+    public JPanel panel1;
     private JButton button1;
-    public JPanel mainPanel;
+    private JLabel Nombrelbl;
+    private JButton borrarButton;
+    private JTextField label;
+    private JButton capturarButton;
 
 
-    private void createUIComponents() {
-        System.out.println("Creando un Button");
+    public Form1() {
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Nombrelbl.setText("Hola ! , Mi nombre es David");
+            }
+        });
+        borrarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Nombrelbl.setText("Ingresa un texto");
+            }
+        });
+        capturarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Nombrelbl.setText(label.getText());
+            }
+        });
     }
+
 }

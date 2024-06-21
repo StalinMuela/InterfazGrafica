@@ -15,9 +15,10 @@ public class Main {
         */
 
         JFrame frame = new JFrame("Mi aplicacion");
-        frame.setContentPane(new Form1().mainPanel);
+        frame.setContentPane(new Form1().panel1);
+        frame.setSize(2500, 2000);
+
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(800, 600);
         frame.pack();
         frame.setVisible(true);
 
