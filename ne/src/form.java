@@ -28,7 +28,8 @@ public class form {
                     ResultSet resultSet = statement.executeQuery(query);
 
                     //PARA BUSCAR
-                    int cedulas =
+                    int cedulas = resultSet.getInt("cedula");
+                    textField1.setText(String.valueOf(cedulas));
 
                     while (resultSet.next()) {
                         if (resultSet.getString("cedula").equals(cedulas)) {
